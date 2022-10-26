@@ -66,6 +66,7 @@ a {
     border-radius: 9px;
     padding: 13px;
     font-size: 13px;
+    font-weight: 600;
     font-family: 'Nunito', sans-serif;
     padding-left: 30px;
     padding-right: 30px;
@@ -87,7 +88,7 @@ a {
 
 .footer-top {
     height: 250px;
-    background-color: rgba(34, 15, 14, 0.486);
+    background-color: rgba(53, 30, 29, 0.734);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -124,7 +125,7 @@ a {
 }
 
 .copyright-box{
-    margin-left: 200px;
+    margin-left: 10%;
     gap: 7px;
     display: flex;
     align-items: flex-start !important;
@@ -139,9 +140,10 @@ a {
     border-radius: 9px;
     padding: 13px;
     font-size: 15px;
+    font-weight: 600;
     width: 86%;
     justify-content: center;
-    transition: 0.4s;
+    transition: 0.4s ease;
 }
 
 .invite-footer:hover{
@@ -163,11 +165,12 @@ a {
     height: 100% !important;
 }
 
-.main-inside{
+.logo-and-button{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 100% !important;
 }
 
 .invite-main{
@@ -179,9 +182,10 @@ a {
     border-radius: 9px;
     padding: 20px;
     font-size: 18px;
+    font-weight: 600;
     justify-content: center;
     gap: 10px;
-    transition: 0.4s;
+    transition: 0.4s ease;
 }
 
 .invite-main:hover{
@@ -192,7 +196,7 @@ a {
 .footer-list{
     list-style: none;
     color: white;
-    margin-right: 200px;
+    margin-right: 10%;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -218,11 +222,51 @@ a {
 }
 
 #bg-video{
-    display: flex;
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
     min-width: 100%;
     min-height: 100%;
-    z-index: -1000;
+    z-index: -1; 
+}
+
+@media (min-aspect-ratio: 16/9){
+    #bg-video{
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    #bg-video{
+        width: auto !important;
+        height: 100% !important;
+    }
+}
+
+@media (max-width: 438px){
+    .terms-privacy{
+        font-size: small !important;
+    }
+    .suport-server{
+        font-size: small !important;
+    }
+}
+
+@media (max-width: 404px){
+    .invite-footer{
+        padding: 10px;
+        font-size: 13px;
+        width: 75%;
+    }
+}
+
+@media (max-width: 372px){
+    .invite{
+        width: 61px;
+        padding: 10px;
+        font-size: 10px;
+    }
 }
